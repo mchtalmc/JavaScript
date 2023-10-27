@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <input type="text" id="txtName">
+    <button id="btnAdd">Add</button>
+
+    <ul id="list">
+    </ul>
+
+    <script>
+    document.getElementById("btnAdd").addEventListener("click", ()=>{
+        const txtName= document.getElementById("txtName");
+        const ulList = document.getElementById("list");
+        const name= txtName.value;
+
+        if(!name) return;
+
+        const li= document.createElement("li");
+        li.innerText= name;
+        li.style.color= "red";
+        li.style.cursor= "pointer";
+        li.setAttribute("data-id", Math.random()*1000);
+        ulList.appendChild(li);
+        li.addEventListener("click", (e)=>{
+           e.target.remove(); //DOM'DAN KALDIRIR
+        });
+
+        txtName.value="";
+        txtName.focus();
+    
+    });
+    
+    
+    </script>
+
+
+
+    
+</body>
+</html>

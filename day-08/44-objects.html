@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+    <script>
+        const car = {
+            brand: "BMW",
+            model: "5.21",
+            color: "red",
+            year: 2020,
+            engine : {
+                type: "diesel",
+                capacity: 2.0
+            },
+            start: function(){
+                
+            }
+            };
+        console.log(car, typeof(car));
+        console.log(car.engine.type);
+
+        car.year= 2023;
+
+        console.log(car);
+        car.start();
+    </script>
+    
+</body>
+</html>

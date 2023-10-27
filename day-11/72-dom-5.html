@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM </title>
+    <style>
+        .red {
+            background-color: red;
+            color: antiquewhite;
+        }
+        
+        .blue {
+            background-color: blue;
+            color: cornsilk;
+        }
+        
+        .black {
+            background-color: black;
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="message">JavaScript DOM Manipilasyonu
+        <span style="display: none;">cok</span> keyifli
+    </p>
+    <button id="btn1">Add</button>
+    <button id="btn2">Remove</button>
+    <button id="btn3">Toggle</button>
+    <button id="btn4">Replace</button>
+
+
+    <script>
+        const elMessage = document.getElementById("message");
+        document.getElementById("btn1").addEventListener("click", () => {
+            elMessage.classList.add("red");
+        });
+        document.getElementById("btn2").addEventListener("click", () => {
+            elMessage.classList.remove("red");
+        });
+        document.getElementById("btn3").addEventListener("click", () => {
+            elMessage.classList.toggle("blue")
+
+        });
+        document.getElementById("btn4").addEventListener("click", () => {
+            elMessage.classList.replace("blue", "black");
+        });
+        //Dikkat EDILMESI GEREKEN : CSS OZELLIKLERI camelCase yazilmak zorundadir.
+        elMessage.style.border = "3px solid blue";
+    </script>
+</body>
+
+</html>

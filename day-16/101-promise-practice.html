@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Practice</title>
+</head>
+
+<body>
+
+    <button id="btn">Click Me</button>
+
+    <script>
+        //Confrim methodu senkron calisir . Asagida ki method da asenktron calisan bir confrim yaptik
+
+        document.getElementById("btn").addEventListener("click", () => {
+            confirmAsync("Are u sure to delete? ").then((resp) => {
+
+
+                if(resp){
+                    console.log("Deleted");
+                    }
+                    else{
+                    console.log("Not Deleted");}
+                })
+
+        });
+
+
+
+
+        const confirmAsync = (msg) => {
+
+            return new Promise((resolve) => {
+
+                setTimeout(() => {
+                    const resp = confirm(msg)
+                    resolve(resp);
+
+                }, 0)
+            });
+        };
+
+       
+
+    </script>
+
+</body>
+
+</html>

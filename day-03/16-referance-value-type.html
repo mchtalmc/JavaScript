@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referance Type- Value Type</title>
+</head>
+<body>
+
+
+    <script>
+        //VALUE TYPE
+        let x= 55;
+        let y=x;
+
+
+        console.log(x,y);
+        y=33;
+        console.log(x,y);
+
+        //REFERANCE TYPE
+
+        let car1= {brand:"BMW", model: "5.21", color: "red"};
+        let car2= car1;
+        console.log(car1,car2);
+
+        car2.color= "blue";
+        console.log(car1,car2);
+    </script>
+    
+</body>
+</html>

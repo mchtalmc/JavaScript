@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+<body>
+
+<script>
+    let cities= ["London", "Helsinki", "Tokyo", "Brussel", "Sivas"];
+
+    cities = ["Marsillia", ...cities, "Paris", "Berlin"];
+    console.log(cities);
+
+    let countries1= ["Germany", "Denmark" , "Belgium", "France"];
+    let countries2 = ["USA", "Canada", "Venezualla", "Sili"];
+
+    let countries = [...countries2, ...countries1];
+    console.log(countries);
+
+
+    const peope = ["Ali", "Ayse", "Mustafa", "Feyza" ,"Salih" , "Mustafa", "Ali"];
+
+    const uniquePeople= [...new Set(peope)]; //Dizide ki tekrar eden elemanlari silip hepsininde 1 tane olacak sekilde obje formuna donusturur.
+    console.log(uniquePeople);
+    
+
+
+
+</script>
+    
+</body>
+</html>

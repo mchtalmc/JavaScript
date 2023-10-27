@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "digital";
+  src: url("../font/digital-7.ttf");
+}
+
+.clock {
+  font-family: digital;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+  color : green;
+}
+
+
+.hidden{
+opacity: 0; /* Seffaf yapiyor */
+}

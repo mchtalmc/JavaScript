@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Practice 2</title>
+</head>
+<body>
+
+
+    <script>
+     const fiyatlar = [120, 200, 150, 300, 640];
+
+     const newPrice = (fiyatlar, rate) => {
+        if(!Array.isArray(fiyatlar) || fiyatlar.length <=0){
+            return;
+        }
+        
+        for(let i=0 ; i<fiyatlar.length; i++){
+            fiyatlar[i]= fiyatlar[i] + (fiyatlar[i]*rate/100);
+        };
+        return fiyatlar;
+     };
+
+      const setPrice= newPrice(fiyatlar, 20);
+     console.log("new Array", setPrice);
+        
+    </script>
+    
+</body>
+</html>

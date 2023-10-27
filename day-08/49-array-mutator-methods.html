@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutator Method</title>
+</head>
+<body>
+
+    <script>
+        const cars = ["Volvo", "BMW", "Ford", "Mazda"];
+        console.log(cars);
+        cars.push("Audi");
+
+        let deleteItem= cars.pop();
+        console.log(cars, deleteItem);
+
+        deleteItem = cars.shift();
+        console.log(cars, deleteItem);
+
+        arrLength= cars.unshift("Mercedes");
+        console.log(cars, arrLength);
+
+        cars.sort(); //Mutator method oldugu icin mevcut diziyi siralar
+        console.log(cars);
+
+        const newArr= cars.toSorted(); //Mutator olmadigi icin mevcut diziyi bozmaz yeni bir dizi olsuturup
+        //siralamayi onda yapar.
+        console.log(newArr);
+
+        cars.reverse();
+        console.log(cars);
+
+        cars.splice(0,2);
+        console.log(cars);
+
+        cars.splice(3,1 ,"Cilinder");
+        console.log(cars);
+    </script>
+    
+</body>
+</html>

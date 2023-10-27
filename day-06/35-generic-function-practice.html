@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic Function Practice</title>
+</head>
+<body>
+
+
+    <script>
+      //function getAge(){
+      //    alert(`My age is ${2023-2000}`);
+      //}
+
+    //  function getAge(birtYear){
+    //    const date= new Date();
+    //    const year= date.getFullYear;
+    //    alert(`My age is ${year-birtYear}`);
+    //  }
+
+    function getAge(birtYear){
+        const date= new Date();
+        const year= date.getFullYear();
+        return year - birtYear;
+    }
+    const age= getAge(2000);
+    alert(`My age is ${age}`);
+
+    const newAge= getAge(2000);
+    const bonus = 123* newAge -234;
+    
+        
+    </script>
+    
+</body>
+</html>

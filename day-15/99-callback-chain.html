@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Chain</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        const getDistance = (a, b, cb) => {
+
+            setTimeout(() => {
+                const result = (a - b) * Math.floor(Math.random() * 50) + 1
+                cb(result);
+            }, 3000)
+        };
+
+        const getCarPrice = (car, distance, cb) => {
+
+            setTimeout(() => {
+                const result = distance * Math.floor(Math.random() * 100) + 1;
+            }, 1500)
+        };
+
+        const doPayment = (price) => {
+
+            setTimeout(() => {
+                const result = Math.random() - 0.5;
+                cb(result > 0 ? true : false);
+            }, 4000)
+        };
+
+        getDistance(60, 20, (distance) => {
+            console.log(`Distance: ${distance}`);
+            getCarPrice("Mercedes", distance, (price) => {
+            console.log(`Price: ${price}`);
+                doPayment(2500, (isSuccess) => {
+                console.log(isSuccess ? "Odeme basarili" : "Odeme basarisiz");});
+            });
+        });
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

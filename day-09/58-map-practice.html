@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Practice</title>
+</head>
+<body>
+
+    <script>
+        const euro= 21.10;
+        const dolar = 20.35;
+        const tlFiyatlar= [100, 150, 100, 50, 80];
+
+       const euroFiyat= tlFiyatlar.map((price) => (price / euro).toFixed(2));
+        console.log(euroFiyat)
+
+        const dolarFiyat = tlFiyatlar.map((dolarFiyat) =>{
+            return (dolarFiyat/dolar).toFixed(2);
+        });
+        console.log(dolarFiyat);
+
+    
+    </script>
+    
+</body>
+</html>

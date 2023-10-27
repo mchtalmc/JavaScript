@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Methods</title>
+</head>
+<body>
+
+    <script>
+        const animals = ["fil", "kus", "deve", "fare", "kedi"];
+        console.log(animals);
+
+        console.log(animals.includes("fil"));
+        console.log(animals.includes("ejderha"));
+        console.log(animals.includes(3));
+
+        console.log(animals.join()); //Paremetresiz kullanirsam aralarina virgul koyarak string haline cevirir
+        console.log(animals.join("-"));
+        console.log(animals.join(""));
+
+
+        console.log(animals.slice(2)); // 2.indexten sonrasini yine dizi olarak return eder. 
+        //Mevcut diziyi ellemez.
+        console.log(animals.slice(2,4)); // 2.indexten baslar 4. indexe kadar gider. 4.index dahil degil.
+
+        console.log(animals.concat([1,2,3,]));
+        console.log(animals);
+
+    </script>
+    
+</body>
+</html>

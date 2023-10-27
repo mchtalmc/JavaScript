@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+
+<body>
+
+    <script>
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            salary: 4500,
+            birtdate: "10.10.1994"
+        };
+
+
+        const message1 = `${person.firstName} Doe isimli kisi ${person.birtdate} tarihinde dunyaya gelmistir ve massi aylik ${person.salary}$dir`;
+        console.log(message1);
+
+
+        //Destructiring Yontemi
+
+        const { firstName, lastName, salary, birtdate } = person;
+        console.log(firstName, lastName, salary, birtdate);
+
+        const message2 = `${firstName} ${lastName} isimli kisi ${birtdate} tarihinde dunyaya gelmistir ve massi aylik ${salary}$dir`;
+        console.log(message2);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

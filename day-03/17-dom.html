@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1><em>Hello DOM</em></h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+      tempora culpa, magni ea voluptatum nobis, mollitia quasi error aspernatur
+      explicabo vero. Et quos asperiores velit deleniti quaerat doloremque dolor
+      perferendis.
+    </p>
+
+    <ul class="menu">
+        <li>Home</li>
+        <li>Abaout</li>
+        <li>Contact</li>
+    </ul>
+
+    <script>
+        const h1Element= document.querySelector("h1");
+        console.log(h1Element);
+        console.log(h1Element.innerText);
+        console.log(h1Element.innerHTML);
+
+        h1Element.innerText= "<u>Merhaba Dunya</u>";
+        h1Element.innerHTML= "<u>Merhaba Dunya</u>";
+
+        const h1FirstElement= document.querySelector(".menu li");
+        console.log(h1FirstElement.innerText);
+
+        const h1FirstElement2= document.querySelector(".menu li:last-child");
+        console.log(h1FirstElement2.innerText);
+        h1FirstElement2.innerText= "Contact Us";
+        h1FirstElement2.innerHTML= `<a href="./contact.html "> Contact Us </a>`;
+    </script>
+  </body>
+</html>

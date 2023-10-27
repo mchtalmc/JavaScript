@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 2</title>
+</head>
+
+<body>
+    <main>
+        <p class="about">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui voluptatibus quibusdam officiis, at praesentium minus earum quam enim neque? Exercitationem molestias dolore ab optio blanditiis commodi obcaecati dolorum quibusdam recusandae!
+        </p>
+
+        <ul class="list">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a id="lnkAbout" href="#">About</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </main>
+
+
+    <script>
+        document.getElementById("lnkAbout").addEventListener("click", (e) => {
+            e.preventDefault(); // Aldigi islemi engeller. 
+
+            // document.querySelector("main .about").style.backgraoundColor = "green"
+
+            console.log(e.target.closest("main").querySelector(".about").style.backgroundColor = "green");
+        });
+
+
+        const loadStudents = () => {
+
+        }
+    </script>
+</body>
+
+</html>

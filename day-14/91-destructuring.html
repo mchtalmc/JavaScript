@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+
+<body>
+
+    <script>
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            salary: 4500,
+            birtdate: "10.10.1994"
+        };
+
+       
+            const sayHello1 = (firstName, lastName) => { 
+                alert(`Hello ${person.firstName} , ${person.lastName}`);
+            };
+            sayHello1(person.firstName, person.lastName);
+
+
+            //Desturucturing Yontemi
+            //{firstName, lastName} == person. DESTURUCTING'DIR.
+
+            const sayHello2 = ({firstName, lastName}) => { 
+            
+                alert(`Hello ${firstName} , ${lastName}`);
+             };
+
+             sayHello2(person);
+
+
+
+    </script>
+
+</body>
+
+</html>
